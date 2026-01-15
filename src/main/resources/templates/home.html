@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en"
+      th:replace="~{base :: parent(~{::#content}, ~{::title}, ~{})}">
+<head>
+    <title>Home | Contact Manager</title>
+</head>
+
+<body class="bg-gray-50 dark:bg-gray-900">
+<div id="content"
+     class="pt-24 min-h-screen
+            bg-gray-50 dark:bg-gray-900">
+
+    <!-- HERO SECTION -->
+    <section class="max-w-7xl mx-auto px-6 py-16
+                    grid md:grid-cols-2 gap-12 items-center">
+
+        <!-- Left -->
+        <div>
+            <h1 class="text-4xl md:text-5xl font-bold
+                       text-gray-800 dark:text-gray-100
+                       leading-tight">
+                Manage Your Contacts
+                <span class="text-blue-600 dark:text-blue-400">
+                    Smartly & Securely
+                </span>
+            </h1>
+
+            <p class="mt-6 text-lg
+                      text-gray-600 dark:text-gray-400">
+                Contact Manager helps you store, organize, and manage your contacts
+                in one secure cloud-based platform.
+            </p>
+
+            <div class="mt-8 flex gap-4">
+                <a th:href="@{/login}"
+                   class="bg-blue-600 dark:bg-blue-500
+                          text-white px-6 py-3 rounded-lg
+                          font-semibold
+                          hover:bg-blue-700 dark:hover:bg-blue-600
+                          transition">
+                    Get Started
+                </a>
+
+                <a th:href="@{/about}"
+                   class="border border-blue-600 dark:border-blue-400
+                          text-blue-600 dark:text-blue-400
+                          px-6 py-3 rounded-lg font-semibold
+                          hover:bg-blue-50 dark:hover:bg-gray-800
+                          transition">
+                    Learn More
+                </a>
+            </div>
+        </div>
+
+        <!-- Right -->
+        <div class="flex justify-center">
+            <img src="https://illustrations.popsy.co/blue/contact-management.svg"
+                 onerror="this.src='/images/phonebook.png'"
+                 alt="Contact Manager Illustration"
+                 class="w-full max-w-md">
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="bg-white dark:bg-gray-800 py-16">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center
+                       text-gray-800 dark:text-gray-100
+                       mb-12">
+                Why Choose Contact Manager?
+            </h2>
+
+            <div class="grid md:grid-cols-3 gap-8">
+
+                <div class="p-6 border
+                            border-gray-200 dark:border-gray-700
+                            rounded-xl
+                            bg-white dark:bg-gray-900
+                            hover:shadow-md dark:hover:shadow-gray-900
+                            transition">
+                    <h3 class="text-xl font-semibold mb-2
+                               text-gray-800 dark:text-gray-100">
+                        📇 Easy Contact Management
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-400">
+                        Add, edit, and organize contacts effortlessly.
+                    </p>
+                </div>
+
+                <div class="p-6 border
+                            border-gray-200 dark:border-gray-700
+                            rounded-xl
+                            bg-white dark:bg-gray-900
+                            hover:shadow-md dark:hover:shadow-gray-900
+                            transition">
+                    <h3 class="text-xl font-semibold mb-2
+                               text-gray-800 dark:text-gray-100">
+                        ⭐ Favorite Contacts
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-400">
+                        Mark important contacts for quick access.
+                    </p>
+                </div>
+
+                <div class="p-6 border
+                            border-gray-200 dark:border-gray-700
+                            rounded-xl
+                            bg-white dark:bg-gray-900
+                            hover:shadow-md dark:hover:shadow-gray-900
+                            transition">
+                    <h3 class="text-xl font-semibold mb-2
+                               text-gray-800 dark:text-gray-100">
+                        🔐 Secure Cloud Storage
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-400">
+                        Your data is safe with secure authentication.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="bg-gray-100 dark:bg-gray-800 py-16">
+        <div class="max-w-6xl mx-auto px-6
+                    grid md:grid-cols-3 text-center gap-8">
+
+            <div>
+                <h3 class="text-4xl font-bold
+                           text-blue-600 dark:text-blue-400">
+                    10K+
+                </h3>
+                <p class="text-gray-600 dark:text-gray-400 mt-2">
+                    Contacts Managed
+                </p>
+            </div>
+
+            <div>
+                <h3 class="text-4xl font-bold
+                           text-blue-600 dark:text-blue-400">
+                    99.9%
+                </h3>
+                <p class="text-gray-600 dark:text-gray-400 mt-2">
+                    Uptime
+                </p>
+            </div>
+
+            <div>
+                <h3 class="text-4xl font-bold
+                           text-blue-600 dark:text-blue-400">
+                    Secure
+                </h3>
+                <p class="text-gray-600 dark:text-gray-400 mt-2">
+                    Data Protection
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16">
+        <div class="max-w-4xl mx-auto text-center px-6
+                    bg-blue-600 dark:bg-blue-500
+                    rounded-xl p-10 text-white">
+            <h2 class="text-3xl font-bold mb-4">
+                Start Managing Your Contacts Today
+            </h2>
+            <p class="mb-6">
+                Join now and simplify your contact management experience.
+            </p>
+            <a th:href="@{/register}"
+               class="bg-white text-blue-600
+                      px-6 py-3 rounded-lg font-semibold
+                      hover:bg-gray-100 transition">
+                Create Free Account
+            </a>
+        </div>
+    </section>
+
+</div>
+</body>
+</html>

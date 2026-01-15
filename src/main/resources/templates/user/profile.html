@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" th:replace="~{base :: parent(~{::#content}, ~{::title}, ~{::script})}">
+    <head>     
+        <title th:text="${loggedInUser.name}+ ' | Profile'">Profile Page</title>
+    </head>
+    <body>
+        <div id="content">
+            <!--User logged in : sidebar-->
+            <div th:if="${loggedInUser}">
+                <div th:replace="~{user/sidebar::sidebar}"></div>
+            </div>
+            <div class="sm:pl-64 pt-20 min-h-screen bg-gray-100 dark:bg-gray-900">
+
+                <div class="max-w-5xl mx-auto px-6">
+
+                    <!-- Profile Card -->
+                    <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden">
+
+                        <!-- Header -->
+                        <div class="bg-gradient-to-r from-blue-600 to-indigo-600 p-6 flex flex-col sm:flex-row items-center gap-6">
+
+                            <!-- Profile Image -->
+                            <img
+                                class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-md"
+                                th:src="@{${loggedInUser.profilePic}}"
+                                onerror="this.src='/images/user.png'"
+                                alt="User image">
+
+                            <!-- Basic Info -->
+                            <div class="text-center sm:text-left">
+                                <h2 class="text-2xl font-bold text-gray-700 dark:text-gray-400"
+                                    th:text="${loggedInUser.name}">
+                                    Rakesh Anand
+                                </h2>
+
+                                <p class="text-gray-700 dark:text-gray-400"
+                                th:text="${loggedInUser.email}">
+                                    user@email.com
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Body -->
+                        <div class="p-6 space-y-6">
+
+                            <!-- User Info -->
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+
+                                <div>
+                                    <p class="text-bold font-semibold text-gray-700 dark:text-gray-400">Phone Number</p>
+                                    <p class="text-lg font-medium text-gray-900 dark:text-white"
+                                    th:text="${loggedInUser.phoneNumber}">
+                                        9876543210
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <p class="text-bold font-semibold text-gray-700 dark:text-gray-400">About</p>
+                                    <p class="text-gray-900 dark:text-white"
+                                    th:text="${loggedInUser.about}">
+                                        Java Developer | Spring Boot Enthusiast
+                                    </p>
+                                </div>
+
+                            </div>
+
+                            <!-- Stats -->
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
+
+                                <div class="flex items-center justify-between bg-blue-50 dark:bg-gray-700 p-4 rounded-lg">
+                                    <div>
+                                        <p class="text-sm font-semibold text-gray-600 dark:text-gray-300">Total Contacts</p>
+                                        <p class="text-2xl font-bold text-blue-600 dark:text-white"
+                                        th:text="${totalContacts}">
+                                            120
+                                        </p>
+                                    </div>
+                                    <i class="fas fa-address-book text-3xl text-blue-500"></i>
+                                </div>
+
+                                <div class="flex items-center justify-between bg-green-50 dark:bg-gray-700 p-4 rounded-lg">
+                                    <div>
+                                        <p class="text-sm font-semibold text-gray-600 dark:text-gray-300">Favourite Contacts</p>
+                                        <p class="text-2xl font-bold text-green-600 dark:text-white"
+                                        th:text="${favoriteContacts}">
+                                            35
+                                        </p>
+                                    </div>
+                                    <i class="fas fa-star text-3xl text-green-500"></i>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <script>
+            console.log("This is profile page");
+        </script>
+    </body>
+</html>

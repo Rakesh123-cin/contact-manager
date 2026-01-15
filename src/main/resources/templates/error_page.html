@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en" th:replace="~{base :: parent(~{::#content}, ~{::title}, ~{})}">
+    <head>
+        <title>Error Page</title>   
+    </head>
+    <body>
+        <div id="content" class="p-4 w-1/2 mx-auto">
+            <div th:replace="~{message::messagebox}"></div>
+        </div>
+        
+    </body>
+</html>

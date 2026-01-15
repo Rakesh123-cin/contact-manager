@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en"
+      th:replace="~{base :: parent(~{::#content}, ~{::title}, ~{})}">
+<head>
+    <title>About | Contact Manager</title>
+</head>
+
+<body class="bg-gray-50 dark:bg-gray-900">
+<div id="content"
+     class="pt-24 px-6 min-h-screen
+            bg-gray-50 dark:bg-gray-900">
+
+    <div class="max-w-5xl mx-auto
+                bg-white dark:bg-gray-800
+                rounded-xl shadow-md dark:shadow-gray-900
+                p-8">
+
+        <h1 class="text-3xl font-bold
+                   text-gray-800 dark:text-gray-100
+                   mb-4">
+            About Contact Manager
+        </h1>
+
+        <p class="text-lg leading-relaxed
+                  text-gray-600 dark:text-gray-400
+                  mb-6">
+            Contact Manager is a modern web application designed to help you
+            securely store, organize, and manage your contacts on the cloud.
+            It provides a simple, fast, and intuitive interface to manage
+            personal and professional connections.
+        </p>
+
+        <div class="grid md:grid-cols-3 gap-6 mt-8">
+
+            <!-- Card -->
+            <div class="p-6 border
+                        border-gray-200 dark:border-gray-700
+                        rounded-lg
+                        bg-white dark:bg-gray-900
+                        hover:shadow-md dark:hover:shadow-gray-900
+                        transition">
+                <h3 class="text-xl font-semibold mb-2
+                           text-gray-800 dark:text-gray-100">
+                    🔐 Secure
+                </h3>
+                <p class="text-gray-600 dark:text-gray-400">
+                    Your contacts are protected with authentication and encrypted storage.
+                </p>
+            </div>
+
+            <!-- Card -->
+            <div class="p-6 border
+                        border-gray-200 dark:border-gray-700
+                        rounded-lg
+                        bg-white dark:bg-gray-900
+                        hover:shadow-md dark:hover:shadow-gray-900
+                        transition">
+                <h3 class="text-xl font-semibold mb-2
+                           text-gray-800 dark:text-gray-100">
+                    ☁ Cloud Based
+                </h3>
+                <p class="text-gray-600 dark:text-gray-400">
+                    Access your contacts anytime, anywhere from any device.
+                </p>
+            </div>
+
+            <!-- Card -->
+            <div class="p-6 border
+                        border-gray-200 dark:border-gray-700
+                        rounded-lg
+                        bg-white dark:bg-gray-900
+                        hover:shadow-md dark:hover:shadow-gray-900
+                        transition">
+                <h3 class="text-xl font-semibold mb-2
+                           text-gray-800 dark:text-gray-100">
+                    ⚡ Fast & Simple
+                </h3>
+                <p class="text-gray-600 dark:text-gray-400">
+                    Clean UI with quick search and easy contact management.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
