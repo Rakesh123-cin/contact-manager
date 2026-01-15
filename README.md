@@ -19,8 +19,10 @@ https://contactmanager.store
 - User registration & login
 - Google & GitHub OAuth login
 - Email verification
+- Profile Image Upload
 - Contact CRUD operations
-- Pagination support
+- Pagination and search
+- Send email
 - Secure HTTPS deployment
 
 ## 🛠 Tech Stack
@@ -40,5 +42,12 @@ Deployed on AWS Elastic Beanstalk with HTTPS enabled using ACM.
 Secrets are managed using environment variables (not committed).
 
 ---
+
+## How to Run Locally
+1. Clone the repository
+2. Configure database in `application.properties`
+3. Run the application using:
+        mvn spring-boot:run
+
 
 ⭐ If you like this project, give it a star!
